@@ -1,0 +1,15 @@
+- model: shop.promo
+  pk: 1
+  fields:
+    name: sale15
+    discount: 15
+- model: shop.promo
+  pk: 2
+  fields:
+    name: sale10
+    discount: 10
+- model: shop.promo
+  pk: 3
+  fields:
+    name: sale5
+    discount: 5

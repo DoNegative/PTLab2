@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script>console.log("{{view.name}}")</script>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Покупка</title>
@@ -9,6 +10,7 @@
         <h3>Покупка</h3>
         <form method="post">{% csrf_token %}
             <input type="hidden" value="{{ view.kwargs.product_id }}" name="product" />
+            <input type="hidden" value="0" name="price" />
             <table>
                 <tr>
                     <td><p>Введите свое имя </p></td>
@@ -18,6 +20,12 @@
                     <td><p>Введите адрес доставки:</p></td>
                     <td>
                         <input type="text" name="address" />
+                    </td>
+                </tr>
+                    <tr>
+                    <td><p>Введите промокод(если есть): </p></td>
+                    <td>
+                        <input type="text" name="promo" />
                     </td>
                 </tr>
                 <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
